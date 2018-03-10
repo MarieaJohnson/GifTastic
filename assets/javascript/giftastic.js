@@ -1,0 +1,99 @@
+// GifTastic JS
+
+// console.log("JavaScript is connected");
+
+var animals = ["Birds", "Dogs", "Cats", "Hedgehogs", "Horses"];
+
+function displayGifs() {
+ 
+  var gif = $(this).attr("data-item");
+
+}
+
+function displayButtons(){
+  $("#gifButton").empty();
+  for (let i = 0; i < animals.length; i++) {
+    const element = animals[i];
+    var newButton = $("<button>");
+    newButton.addClass("animal");
+    newButton.attr("data-name", element);
+    newButton.text(element);
+    $("#gifButton").append(newButton);
+  }
+
+}
+
+$("#newGif").on("click", function (event){
+  event.preventDefault();
+  var userInput =  $("#gifInput").val();
+  animals.push(userInput);
+  console.log(animals);
+  console.log(userInput);
+  displayButtons();
+})
+
+displayButtons();
+
+$(".animal").on("click", function () {
+  // newButton.attr("data-name", element);
+  var item = $(this).attr("data-name");
+  console.log(item);
+
+  // URL to search Giphy
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + item + "&api_key=7N9x3bYP39sIn52AU3Ml0BfnNnT51d5d&limit=10";
+
+  // Performing AJAX GET request
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+
+    // Gif from the API
+    .then(function (response) {
+
+      var gifHere = $("<div class = 'gif'>");
+
+      // Storing an array of results in the results variable
+      var results = response.data;
+
+      // Looping over every result item
+      for (var i = 0; i < results.length; i++) {
+
+        // Only taking action if the photo has an appropriate rating
+        if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+          // Creating a div with the class "item"
+          var gifDiv = $("<div class='item'>");
+
+          // Storing the result item's rating
+          var rating = results[i].rating;
+
+          // Creating a paragraph tag with the result item's rating
+          var pRating = $("<p>").text("Rating: " + rating);
+
+          // Creating an image tag
+          var itemImage = $("<img>");
+
+          // Giving the image tag an src attribute of a proprty pulled off the
+          // result item
+          itemImage.attr("src", results[i].images.fixed_height.url);
+
+          // Appending the paragraph and itemImage we created to the "gifDiv" div we created
+          gifDiv.append(pRating);
+          gifDiv.append(itemImage);
+
+          // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+          $("#gifHere").prepend(gifDiv);
+
+
+          $(".gif").on("click", function () {
+            var state = $(this).attr("data-state");
+
+            // Animate/still Gif
+            if (state === "still") {
+              $(this).attr("src", $(this).attr("data-animate"));
+              $(this).attr("data-state", "animate");
+            } else {
+              $(this).attr("src", $(this).attr("data-still"));
+              $(this).attr("data-state", "still");
+            }
+          })}}})})
