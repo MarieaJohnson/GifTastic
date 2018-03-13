@@ -5,13 +5,14 @@
 var animals = ["Birds", "Dogs", "Cats", "Hedgehogs", "Horses"];
 
 function displayGifs() {
- 
+  // document.getElementById("#gifHere").innerHTML = "";
+  // $("#gifHere").clear();
   var gif = $(this).attr("data-item");
-
 }
 
-function displayButtons(){
+function displayButtons() {
   $("#gifButton").empty();
+  $("#gifInput").val("");
   for (let i = 0; i < animals.length; i++) {
     const element = animals[i];
     var newButton = $("<button>");
@@ -20,22 +21,24 @@ function displayButtons(){
     newButton.text(element);
     $("#gifButton").append(newButton);
   }
-
 }
 
 $("#newGif").on("click", function (event){
-  event.preventDefault();
-  var userInput =  $("#gifInput").val();
-  animals.push(userInput);
-  console.log(animals);
-  console.log(userInput);
-  displayButtons();
+    $('#gifHere').empty();
+    // Prevents browser from refreshing
+    event.preventDefault();
+    var userInput = $("#gifInput").val();
+    // Pushes userInput into animals array
+    animals.push(userInput);
+    console.log(animals);
+    console.log(userInput);
+    displayButtons();
 })
 
 displayButtons();
 
-$(".animal").on("click", function () {
-  // newButton.attr("data-name", element);
+$(document).on("click",".animal", function () {
+  $('#gifHere').empty();
   var item = $(this).attr("data-name");
   console.log(item);
 
@@ -71,7 +74,7 @@ $(".animal").on("click", function () {
           var pRating = $("<p>").text("Rating: " + rating);
 
           // Creating an image tag
-          var itemImage = $("<img>");
+          var itemImage = $("<img class = 'result'>");
 
           // Giving the image tag an src attribute of a proprty pulled off the
           // result item
@@ -81,9 +84,8 @@ $(".animal").on("click", function () {
           gifDiv.append(pRating);
           gifDiv.append(itemImage);
 
-          // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+          // Prepending the gifDiv to the "#gifHere" div in the HTML
           $("#gifHere").prepend(gifDiv);
-
 
           $(".gif").on("click", function () {
             var state = $(this).attr("data-state");
@@ -96,4 +98,8 @@ $(".animal").on("click", function () {
               $(this).attr("src", $(this).attr("data-still"));
               $(this).attr("data-state", "still");
             }
-          })}}})})
+          })
+        }
+      }
+    })
+  })
