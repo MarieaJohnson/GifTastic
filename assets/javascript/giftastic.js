@@ -78,7 +78,12 @@ $(document).on("click",".animal", function () {
 
           // Giving the image tag an src attribute of a proprty pulled off the
           // result item
-          itemImage.attr("src", results[i].images.fixed_height.url);
+          var animated = results[i].images.fixed_height.url;
+          var still = results[i].images.fixed_height_still.url;
+          itemImage.attr("src", still);
+          itemImage.attr("data-state", "still");
+          itemImage.attr("data-animate", animated);
+          itemImage.attr("data-still", still);
 
           // Appending the paragraph and itemImage we created to the "gifDiv" div we created
           gifDiv.append(pRating);
@@ -86,20 +91,19 @@ $(document).on("click",".animal", function () {
 
           // Prepending the gifDiv to the "#gifHere" div in the HTML
           $("#gifHere").prepend(gifDiv);
-
-          $(".gif").on("click", function () {
-            var state = $(this).attr("data-state");
-
-            // Animate/still Gif
-            if (state === "still") {
-              $(this).attr("src", $(this).attr("data-animate"));
-              $(this).attr("data-state", "animate");
-            } else {
-              $(this).attr("src", $(this).attr("data-still"));
-              $(this).attr("data-state", "still");
-            }
-          })
         }
       }
     })
   })
+$(document).on("click", ".result", function () {
+  var state = $(this).attr("data-state");
+
+  // Animate/still Gif
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+})
