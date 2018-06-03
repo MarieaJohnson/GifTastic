@@ -4,8 +4,7 @@ A web app that allows searching for gifs using the api.giphy.com and .ajax calls
 
 ## Deployment
 
-Added github pages: [GifTastic](https://marieajohnson.github.io/GifTastic/) <br>
-Link: https://marieajohnson.github.io/GifTastic/
+Link: [GifTastic](https://marieajohnson.github.io/GifTastic/) <br>
 
 ## License
 
