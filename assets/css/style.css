@@ -1,28 +1,63 @@
 /* GifTastic CSS */
 
 
-/* body {
-   background-image: url("../images/abstract_cirles_background");
-   background-repeat: no-repeat;
-   background-size: cover;
-} */
-
-/* #gifHere {
-  column-count: 2;
-} */
-
-/* button{
-
+body {
+  background-image: url("../images/abstract_circles_background_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 
-div{
+#newGif {
+  font-size: 25px;
+  border-radius: 5px;
+}
 
+#gifButton {
+  padding: 15px;
+  margin: 15px;
+}
+
+.animal {
+  font-size: 25px;
+  padding: 10px;
+  border: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#gifHere {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+#still-animate {
+  font-size: 25px;
+}
+
+/* .container {
+  font-size: 20px;
+  display: block;
+  align-content: center;
+} */
+
+label {
+  font-size: 25px;
 }
 
 #gifInput{
-
-} */
-
-/* input{
   margin: 10px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+/* .item {
+  /* display: block; */
+  /* height: 75px; */
+  /* width: 100px; */
+/* } */
+
+/* .grid-container {
+  grid-gap: 50px;
 } */
