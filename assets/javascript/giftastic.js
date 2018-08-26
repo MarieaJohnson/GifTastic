@@ -2,7 +2,7 @@
 
 // console.log("JavaScript is connected");
 
-var animals = ["Birds", "Dogs", "Cats", "Hedgehogs", "Horses"];
+var animals = ["Planes", "Dogs", "Food", "Hedgehogs", "Cars"];
 
 function displayGifs() {
   // document.getElementById("#gifHere").innerHTML = "";
