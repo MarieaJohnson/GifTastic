@@ -1,12 +1,14 @@
 # GifTastic
 
-A web app that allows searching for gifs using the api.giphy.com and .ajax calls. You can toggle between animate and still by clicking on the gif.
+A web app that searchs for GIFs using the api.giphy.com and .ajax calls. You may select from pre-set options or create your own search.
+
+You may toggle between animate and still by clicking on the returned GIF.
+
+Written so each returned GIF will only have a rating of "G" or "PG".
+
 
 ## Deployment
 
 Link: [GifTastic](https://marieajohnson.github.io/GifTastic/) <br>
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
