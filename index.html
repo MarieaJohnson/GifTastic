@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,14 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <link href="assets/css/reset.css" rel="resetstylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
 
   <title>GifTastic</title>
 </head>
+
 <body>
   <div class="container">
-    <h1>Select a Button or Search for New GIFs</h1>
+    <h1>Select a Button or Search for New GIFs below</h1>
     <div id="gifButton"></div>
     <form>
       <label for="gifInput">Enter your GIF request here:</label>
@@ -26,9 +29,10 @@
       <div id="gifHere"></div>
     </form>
     <div id="still-animate">Click the GIF to Start/Stop Animation</div>
-  <div id="gifs">
-  </div>
-
+    <div class="row">
+      <div id="gifs" class="column">
+      </div>
+    </div>
     <script src="assets/javascript/giftastic.js"></script>
 </body>
 

@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  font-family: 'Kalam', cursive;
 }
 
 #newGif {
@@ -27,6 +28,7 @@ body {
 }
 
 #gifHere {
+  resize: auto;
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -35,12 +37,6 @@ body {
 #still-animate {
   font-size: 25px;
 }
-
-/* .container {
-  font-size: 20px;
-  display: block;
-  align-content: center;
-} */
 
 label {
   font-size: 25px;
@@ -51,6 +47,41 @@ label {
   font-size: 25px;
   border-radius: 5px;
 }
+
+/* div {
+    display:block;
+    width:500px;
+    margin:30px;
+} */
+
+/* #gifs { */
+  /* float: left;
+  padding: 10px;
+  display: block;
+  width: 500px;
+  margin: 30px; */
+  /*  put image grid here to align pulled GIFs */
+/* } */
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* .border-right {
+    background-image: url("http://imageshack.us/a/img641/9127/borderbottomt.png"), url("http://imageshack.us/a/img825/9262/borderrighto.png");
+    background-position: center bottom, center right;
+    background-repeat:no-repeat;
+} */
 
 /* .item {
   /* display: block; */
