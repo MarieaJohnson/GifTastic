@@ -1,9 +1,8 @@
 /* GifTastic CSS */
 
 
-body {
-  background-image: url("../images/abstract_circles_background_1.jpg");
-  background-repeat: no-repeat;
+html {
+  background: url("../images/abstract_circles_background_1.jpg") bottom center;
   background-size: cover;
   text-align: center;
   font-family: 'Kalam', cursive;
@@ -54,28 +53,44 @@ label {
     margin:30px;
 } */
 
-/* #gifs { */
-  /* float: left;
-  padding: 10px;
-  display: block;
-  width: 500px;
-  margin: 30px; */
-  /*  put image grid here to align pulled GIFs */
-/* } */
+#gifshere {
+  flex: 1;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+/* put image grid here to align pulled GIFs */
+}
+/* .span {
+
+
+} */
+.item {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: .25rem;
+  font-size: 1.5rem;
+  padding: .5rem .5rem;
+  /* transition: all .07s ease; */
+  width: 30rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
+/* .column {
   float: left;
   width: 20%;
   padding: 5px;
-}
+} */
 
 /* Clear floats after image containers */
-.row::after {
+/* .row::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
 
 /* .border-right {
     background-image: url("http://imageshack.us/a/img641/9127/borderbottomt.png"), url("http://imageshack.us/a/img825/9262/borderrighto.png");
