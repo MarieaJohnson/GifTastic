@@ -10,6 +10,9 @@ function displayGifs() {
   var gif = $(this).attr("data-item");
 }
 
+/* <script>document.getElementById("result").innerHTML = 'gifHere';  
+</script>; */
+
 function displayButtons() {
   $("#gifButton").empty();
   $("#gifInput").val("");
@@ -43,7 +46,7 @@ $(document).on("click",".animal", function () {
   console.log(item);
 
   // URL to search Giphy
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + item + "&api_key=7N9x3bYP39sIn52AU3Ml0BfnNnT51d5d&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + item + "&api_key=7N9x3bYP39sIn52AU3Ml0BfnNnT51d5d&limit=9";
 
   // Performing AJAX GET request
   $.ajax({
@@ -76,8 +79,7 @@ $(document).on("click",".animal", function () {
           // Creating an image tag
           var itemImage = $("<img class = 'result'>");
 
-          // Giving the image tag an src attribute of a proprty pulled off the
-          // result item
+          // Giving the image tag a src attribute of a property pulled off the result item
           var animated = results[i].images.fixed_height.url;
           var still = results[i].images.fixed_height_still.url;
           itemImage.attr("src", still);
@@ -86,8 +88,9 @@ $(document).on("click",".animal", function () {
           itemImage.attr("data-still", still);
 
           // Appending the paragraph and itemImage we created to the "gifDiv" div we created
-          gifDiv.append(pRating);
+          
           gifDiv.append(itemImage);
+          gifDiv.append(pRating);
 
           // Prepending the gifDiv to the "#gifHere" div in the HTML
           $("#gifHere").prepend(gifDiv);

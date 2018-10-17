@@ -1,109 +1,108 @@
 /* GifTastic CSS */
 
+body {
+  color: #665544;
+  background-image: url("../images/abstract_circles_background_1.jpg");
+  font-family: 'Kalam', cursive;
+  text-align: center;
+}
 
-html {
-  background: url("../images/abstract_circles_background_1.jpg") bottom center;
-  background-size: cover;
+h1 {
+  font-family: "Jokerman";
+  font-size: 55px;
+}
+
+h2 {
   text-align: center;
   font-family: 'Kalam', cursive;
+  font-size: 25px;
 }
 
-#newGif {
-  font-size: 25px;
+#gifInput {
+  height: 20px;
+  width: 130px;
+  font-size: 20px;
+  color: #665544;
   border-radius: 5px;
+  background-color: #e7e3d8;
 }
 
-#gifButton {
-  padding: 15px;
-  margin: 15px;
+.grid-container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
 }
-
-.animal {
-  font-size: 25px;
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid #665544;
   padding: 10px;
-  border: 20px;
-  margin: 10px;
-  border-radius: 5px;
-}
-
-#gifHere {
-  resize: auto;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-}
-
-#still-animate {
-  font-size: 25px;
 }
 
 label {
   font-size: 25px;
 }
 
-#gifInput{
-  margin: 10px;
-  font-size: 25px;
+button {
+  font-size: 20px;
+  color: #665544;
   border-radius: 5px;
+  background-color: #e7e3d8;
 }
 
-/* div {
-    display:block;
-    width:500px;
-    margin:30px;
-} */
-
-#gifshere {
-  flex: 1;
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-/* put image grid here to align pulled GIFs */
-}
-/* .span {
-
-
-} */
-.item {
-  border: .4rem solid black;
-  border-radius: .5rem;
-  margin: .25rem;
-  font-size: 1.5rem;
-  padding: .5rem .5rem;
-  /* transition: all .07s ease; */
-  width: 30rem;
-  text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+.wrapper {
+  width: 720px;
+  margin: 0px auto;
 }
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-/* .column {
+.header {
+  margin: 40px 0px 20px 0px;
+}
+
+#gifButton {
+  padding: 15px;
+  margin: 15px;
+  font-family: 'Kalam';
+  font-size: 45px;
+}
+
+.animal {
+  font-size: 20px;
+  color: #665544;
+  padding: 10px;
+  border: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #e7e3d8;
+}
+
+#still-animate {
+  font-size: 20px;
+}
+
+.result {
+  width: 300px;
   float: left;
-  width: 20%;
-  padding: 5px;
-} */
+  margin: 10px;
+  height: 210px;
+  background-image: url("../images/leftcornershadow.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
-/* Clear floats after image containers */
-/* .row::after {
-  content: "";
-  clear: both;
-  display: table;
-} */
+span {
+  display: block;
+  width: 202px;
+  height: 170px;
+  background-color: #e7e3d8;
+  margin: 0px;
+  padding: 9px;
+  text-align: left;
 
-/* .border-right {
-    background-image: url("http://imageshack.us/a/img641/9127/borderbottomt.png"), url("http://imageshack.us/a/img825/9262/borderrighto.png");
-    background-position: center bottom, center right;
-    background-repeat:no-repeat;
-} */
+}
 
-/* .item {
-  /* display: block; */
-  /* height: 75px; */
-  /* width: 100px; */
-/* } */
-
-/* .grid-container {
-  grid-gap: 50px;
-} */
+#gifhere {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #d6d6d6;
+}
