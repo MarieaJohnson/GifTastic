@@ -10,9 +10,6 @@ function displayGifs() {
   var gif = $(this).attr("data-item");
 }
 
-/* <script>document.getElementById("result").innerHTML = 'gifHere';  
-</script>; */
-
 function displayButtons() {
   $("#gifButton").empty();
   $("#gifInput").val("");

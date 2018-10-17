@@ -3,8 +3,10 @@
 body {
   color: #665544;
   background-image: url("../images/abstract_circles_background_1.jpg");
+  background-size: cover;
   font-family: 'Kalam', cursive;
   text-align: center;
+  display: block;
 }
 
 h1 {
@@ -16,6 +18,10 @@ h2 {
   text-align: center;
   font-family: 'Kalam', cursive;
   font-size: 25px;
+}
+
+p {
+  color: white;
 }
 
 #gifInput {
@@ -32,11 +38,8 @@ h2 {
   grid-column-gap: 10px;
   grid-template-columns: auto auto auto;
   padding: 5px;
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 5px solid #665544;
-  padding: 10px;
+  column-count: 3;
+  margin-left: 140px;
 }
 
 label {
@@ -48,11 +51,6 @@ button {
   color: #665544;
   border-radius: 5px;
   background-color: #e7e3d8;
-}
-
-.wrapper {
-  width: 720px;
-  margin: 0px auto;
 }
 
 .header {
@@ -80,29 +78,18 @@ button {
   font-size: 20px;
 }
 
-.result {
-  width: 300px;
+.item {
+  border: 5px solid #665544;
+  max-width: flex;
+  max-height: flex;
   float: left;
   margin: 10px;
-  height: 210px;
-  background-image: url("../images/leftcornershadow.png");
-  background-repeat: no-repeat;
-  background-position: bottom;
+  text-align: center;
 }
 
-span {
-  display: block;
-  width: 202px;
-  height: 170px;
-  background-color: #e7e3d8;
-  margin: 0px;
-  padding: 9px;
-  text-align: left;
-
-}
-
-#gifhere {
-  width: 200px;
-  height: 150px;
-  border: 1px solid #d6d6d6;
+.result {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 250px;
 }
